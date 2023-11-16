@@ -5,7 +5,6 @@ import random
 
 from bg_colors import bcolors
 
-
 # uppgift 1
 while True:
 
@@ -21,16 +20,15 @@ while True:
 
 # uppgift 2 - se omniscient.py 
 
-
 # uppgift 3
 user_name = input("What's your name ?: ")
 
 print(f"hello {user_name} !\nUse any key (except enter) to exit")
 
 while True: 
-    if msvcrt.getwch():
-        print(f"Bye {user_name} !")
+    if msvcrt.getch() != "\r": # not enter
         break
+    continue
 
 # uppgift 4
 print(bcolors.YELLOW + "Module with colors is created and imported !" + bcolors.DEFAULT)
@@ -55,5 +53,3 @@ while True:
     
     time.sleep(1)
     os.system("cls")
-
-
