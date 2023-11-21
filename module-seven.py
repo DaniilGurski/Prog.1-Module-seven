@@ -5,33 +5,33 @@ import random
 
 from bg_colors import bcolors
 
-# uppgift 1
-while True:
+# # uppgift 1
+# while True:
 
-    user_input = input(":")
+#     user_input = input(":")
 
-    if user_input == "cl":
-        os.system("cls")
-    elif user_input == "q":
-        break
+#     if user_input == "cl":
+#         os.system("cls")
+#     elif user_input == "q":
+#         break
 
-    print(user_input)
+#     print(user_input)
 
 
-# uppgift 2 - se omniscient.py 
+# # uppgift 2 - se omniscient.py 
 
-# uppgift 3
-user_name = input("What's your name ?: ")
+# # uppgift 3
+# user_name = input("What's your name ?: ")
 
-print(f"hello {user_name} !\nUse any key (except enter) to exit")
+# print(f"hello {user_name} !\nUse any key (except enter) to exit")
 
-while True: 
-    if msvcrt.getch() != "\r": # not enter
-        break
-    continue
+# while True: 
+#     if msvcrt.getch() != "\r": # not enter
+#         break
+#     continue
 
-# uppgift 4
-print(bcolors.YELLOW + "Module with colors is created and imported !" + bcolors.DEFAULT)
+# # uppgift 4
+# print(bcolors.YELLOW + "Module with colors is created and imported !" + bcolors.DEFAULT)
 
 
 # uppgift 5
@@ -46,10 +46,9 @@ colors = {
      6: bcolors.RED
 }
 
-index = 0
 while True:
-    new_color = colors[random.randint(1,6)]
-    print(new_color + "hello world :)" + bcolors.DEFAULT)
-    
-    time.sleep(1)
-    os.system("cls")
+    for index in colors.keys(): 
+        new_color = colors[index]
+        print(new_color + "hello world :)" + bcolors.DEFAULT)
+        time.sleep(1)
+        os.system("cls")
